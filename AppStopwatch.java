@@ -76,10 +76,7 @@ public class AppTimer {
         stopButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (!isRunning) {
-                    isRunning = true;
-                    timer.start();
-                }
+                    isRunning = false;
             }
         });
 
@@ -93,7 +90,7 @@ public class AppTimer {
                 lapTimes = "00:00:00"; //variable for getting and counting lap time is reset
                 lapCount = 0;
                 lapArea.setText("Lap Times:\n"); //clear time display and reset it
-                updateTimerLabel(timerLabel);    
+                updateTimerLabel(timerLabel);
             }
         });
 
